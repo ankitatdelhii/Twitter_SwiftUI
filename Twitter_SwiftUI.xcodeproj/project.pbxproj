@@ -11,6 +11,7 @@
 		9D46A34726504912006352F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46A34626504912006352F6 /* ContentView.swift */; };
 		9D46A34926504913006352F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D46A34826504913006352F6 /* Assets.xcassets */; };
 		9D46A34C26504913006352F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D46A34B26504913006352F6 /* Preview Assets.xcassets */; };
+		9D46A3572650506B006352F6 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46A3562650506B006352F6 /* FeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		9D46A34826504913006352F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D46A34B26504913006352F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9D46A34D26504913006352F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D46A3562650506B006352F6 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,10 @@
 		9D46A34326504912006352F6 /* Twitter_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				9D46A35526505057006352F6 /* ViewModel */,
+				9D46A35426505052006352F6 /* View */,
+				9D46A3532650504C006352F6 /* Model */,
 				9D46A34426504912006352F6 /* Twitter_SwiftUIApp.swift */,
-				9D46A34626504912006352F6 /* ContentView.swift */,
 				9D46A34826504913006352F6 /* Assets.xcassets */,
 				9D46A34D26504913006352F6 /* Info.plist */,
 				9D46A34A26504913006352F6 /* Preview Content */,
@@ -67,6 +71,29 @@
 				9D46A34B26504913006352F6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9D46A3532650504C006352F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D46A35426505052006352F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D46A34626504912006352F6 /* ContentView.swift */,
+				9D46A3562650506B006352F6 /* FeedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9D46A35526505057006352F6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D46A34726504912006352F6 /* ContentView.swift in Sources */,
+				9D46A3572650506B006352F6 /* FeedView.swift in Sources */,
 				9D46A34526504912006352F6 /* Twitter_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
