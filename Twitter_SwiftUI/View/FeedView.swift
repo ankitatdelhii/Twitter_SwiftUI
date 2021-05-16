@@ -11,7 +11,11 @@ struct FeedView: View {
     var body: some View {
         ZStack(alignment: .bottomTrailing, content: {
             ScrollView {
-                
+                VStack {
+                    ForEach(0..<9) { _ in
+                        TweetCell()
+                    }
+                }
             }
             
             Button(action: {}, label: {
