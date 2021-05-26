@@ -14,15 +14,13 @@ struct SearchView: View {
     var body: some View {
         ScrollView {
             SearchBar(text: $searchText)
-                .cornerRadius(8)
-                .padding(.horizontal)
-                .padding(.top)
+                .padding()
             
             VStack {
                 ForEach(Range(0...12)) { _ in
                     Text("New User")
                 }
-            }.padding(.top)
+            }
         }
         
     }
