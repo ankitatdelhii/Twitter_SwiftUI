@@ -18,6 +18,8 @@
 		9D46A34C26504913006352F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D46A34B26504913006352F6 /* Preview Assets.xcassets */; };
 		9D46A3572650506B006352F6 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46A3562650506B006352F6 /* FeedView.swift */; };
 		9D5D42B126514C520025D008 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5D42B026514C520025D008 /* TweetCell.swift */; };
+		9DC4F34E2663B59300549ED8 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4F34D2663B59300549ED8 /* MessageInputView.swift */; };
+		9DC4F3502663B75E00549ED8 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4F34F2663B75E00549ED8 /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		9D46A34D26504913006352F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D46A3562650506B006352F6 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		9D5D42B026514C520025D008 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		9DC4F34D2663B59300549ED8 /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
+		9DC4F34F2663B75E00549ED8 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 			children = (
 				9D03238626601D620011A87A /* ConversationsView.swift */,
 				9D03238826601DE70011A87A /* ConversationsCell.swift */,
+				9DC4F34D2663B59300549ED8 /* MessageInputView.swift */,
+				9DC4F34F2663B75E00549ED8 /* ChatView.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -192,8 +198,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D13859D265EC78000F56E83 /* SearchView.swift in Sources */,
+				9DC4F34E2663B59300549ED8 /* MessageInputView.swift in Sources */,
 				9D46A34726504912006352F6 /* ContentView.swift in Sources */,
 				9D46A3572650506B006352F6 /* FeedView.swift in Sources */,
+				9DC4F3502663B75E00549ED8 /* ChatView.swift in Sources */,
 				9D03238726601D620011A87A /* ConversationsView.swift in Sources */,
 				9D46A34526504912006352F6 /* Twitter_SwiftUIApp.swift in Sources */,
 				9D03238926601DE70011A87A /* ConversationsCell.swift in Sources */,

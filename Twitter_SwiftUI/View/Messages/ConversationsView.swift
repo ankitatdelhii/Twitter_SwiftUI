@@ -39,7 +39,7 @@ struct ConversationsView: View {
             .clipShape(Circle())
             .padding()
             .sheet(isPresented: $isShowingNewMessageView, content: {
-                SearchView()
+                ChatView()
             })
             
         })
