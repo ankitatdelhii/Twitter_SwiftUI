@@ -9,19 +9,24 @@ import SwiftUI
 
 struct ConversationsView: View {
     
+    @State var isShowingNewMessageView = false
+    
     var body: some View {
         
         ZStack(alignment: .bottomTrailing, content: {
             ScrollView {
                 VStack {
                     ForEach(0..<9) { _ in
-                        ConversationsCell()
-//                        Divider()
+                        NavigationLink(
+                            destination: Text("Inside Chat"),
+                            label: {
+                                ConversationsCell()
+                            })
                     }
                 }
             }
             
-            Button(action: {}, label: {
+            Button(action: { self.isShowingNewMessageView.toggle() }, label: {
                 Image(systemName: "envelope")
                     .renderingMode(.template)
                     .resizable()
@@ -33,6 +38,9 @@ struct ConversationsView: View {
             .foregroundColor(Color(.white))
             .clipShape(Circle())
             .padding()
+            .sheet(isPresented: $isShowingNewMessageView, content: {
+                SearchView()
+            })
             
         })
         

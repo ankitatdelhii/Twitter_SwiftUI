@@ -22,10 +22,12 @@ struct ConversationsCell: View {
                         .font(.system(size: 14, weight: .semibold))
                     
                     Text("This is a long conversation that you want to fix in here. I would like to tell you that its working now.")
-                        .font(.system(size: 14, weight: .regular))
+                        .font(.system(size: 15, weight: .regular))
                         .lineLimit(2)
-                        .fixedSize(horizontal: false, vertical: true)
+//                        .fixedSize(horizontal: false, vertical: true)
                 }.padding(.trailing)
+                .foregroundColor(.black)
+//                .frame(height: 60)
             }
             
             Divider()
