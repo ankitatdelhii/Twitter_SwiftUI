@@ -15,15 +15,37 @@ struct ChatView: View {
         VStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
-                    ForEach(Range(0...10)) { _ in
+                    ForEach(MOCK_MESSAGES) { eachMessage in
                         HStack {
-                            Spacer()
-                            Text("Text Message")
-                                .padding()
-                                .background(Color.blue)
-                                .clipShape(ChatBubble(isFromCurrentUser: true))
-                                .foregroundColor(.white)
-                                .padding(.horizontal)
+                            
+                            if eachMessage.isCurrentUser {
+                                Spacer()
+                                Text(eachMessage.message)
+                                    .padding()
+                                    .background(Color.blue)
+                                    .clipShape(ChatBubble(isFromCurrentUser: true))
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal)
+                            } else {
+                                HStack(alignment: .bottom) {
+                                    Image(eachMessage.image)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 40, height: 40)
+                                        .clipShape(Circle())
+                                    
+                                    Text(eachMessage.message)
+                                        .padding()
+                                        .background(Color(.systemGray5))
+                                        .clipShape(ChatBubble(isFromCurrentUser: false))
+                                        .foregroundColor(.black)
+                                        
+                                }.padding(.horizontal)
+                                Spacer()
+
+                            }
+                            
+                            
                         }
                     }
                 }
