@@ -19,7 +19,7 @@ struct ChatView: View {
                         MessageView(eachMessage: eachMessage)
                     }
                 }
-            }
+            }.padding(.top)
             
             MessageInputView(messageText: $messageText)
                 .padding()
