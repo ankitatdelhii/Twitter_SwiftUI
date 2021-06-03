@@ -19,7 +19,12 @@ struct SearchView: View {
             HStack {
                 VStack {
                     ForEach(Range(0...5)) { _ in
-                        UserCell()
+                        NavigationLink(
+                            destination: UserProfileView(),
+                            label: {
+                                UserCell()
+                            })
+                        
                     }
                 }.padding(.leading)
                 
