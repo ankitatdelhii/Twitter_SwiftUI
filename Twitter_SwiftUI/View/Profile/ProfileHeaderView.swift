@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ProfileHeaderView: View {
+    
+    @State private var selectedFilter: TweetFilterOptions = .tweets
+    
     var body: some View {
         VStack {
             
@@ -52,7 +55,9 @@ struct ProfileHeaderView: View {
             }.padding()
             
             ProfileActionButtonView(currentUser: true)
+                .padding()
             
+            FilterButtomView(selectedOption: $selectedFilter)
             Spacer()
             
         }
