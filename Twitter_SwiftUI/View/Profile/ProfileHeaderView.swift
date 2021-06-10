@@ -58,6 +58,11 @@ struct ProfileHeaderView: View {
                 .padding()
             
             FilterButtomView(selectedOption: $selectedFilter)
+            
+//            ForEach(Range(0...9)) { _ in
+//                TweetCell()
+//            }
+            
             Spacer()
             
         }
