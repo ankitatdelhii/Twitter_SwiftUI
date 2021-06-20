@@ -9,8 +9,16 @@ import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
     
+    @Binding var selectedImage: UIImage?
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
+    init(image: Binding<UIImage?>) {
+        self._selectedImage = image
+    }
+    
     func makeUIViewController(context: Context) -> UIViewController {
         let picker = UIImagePickerController()
+        picker.delegate = context.coordinator
         return picker
     }
     
@@ -35,9 +43,10 @@ extension ImagePicker {
         
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//            if let selectedImage = info[.editedImage] {
-//
-//            }
+            if let selectedImage = info[.originalImage] as? UIImage {
+                self.parent.selectedImage = selectedImage
+                self.parent.mode.wrappedValue.dismiss()
+            }
         }
         
     }
