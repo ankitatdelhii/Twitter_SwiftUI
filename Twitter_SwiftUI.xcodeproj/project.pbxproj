@@ -41,6 +41,7 @@
 		9DC4F3502663B75E00549ED8 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4F34F2663B75E00549ED8 /* ChatView.swift */; };
 		9DC4F3522663E15D00549ED8 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4F3512663E15D00549ED8 /* ChatBubble.swift */; };
 		9DC4F3542663E7C700549ED8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4F3532663E7C700549ED8 /* Message.swift */; };
+		9DFED9682683C11C001659C1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFED9672683C11C001659C1 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		9DC4F34F2663B75E00549ED8 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		9DC4F3512663E15D00549ED8 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		9DC4F3532663E7C700549ED8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9DFED9672683C11C001659C1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				9DC4F3532663E7C700549ED8 /* Message.swift */,
+				9DFED9672683C11C001659C1 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				9D08B462268113950032F117 /* AuthViewModel.swift in Sources */,
 				9D5D42B126514C520025D008 /* TweetCell.swift in Sources */,
 				9D525CFE2669573100156C70 /* UserProfileView.swift in Sources */,
+				9DFED9682683C11C001659C1 /* User.swift in Sources */,
 				9D13859F265EC89A00F56E83 /* SearchBar.swift in Sources */,
 				9D525D022669584100156C70 /* ProfileActionButtonView.swift in Sources */,
 				9D871F51267643CE0076E478 /* CustomTextField.swift in Sources */,
