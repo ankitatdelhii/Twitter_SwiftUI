@@ -13,7 +13,7 @@ class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User? // To Observe signed in user
     @Published var isAuthenticating = false // To observe to show loader
     @Published var error: Error? // To observe to show toast
-    @Published var user: User?
+    @Published var user: User? // To observe our Custom user
     
     init() {
         userSession = Auth.auth().currentUser
@@ -26,6 +26,7 @@ class AuthViewModel: ObservableObject {
                 return
             }
             print("Successfully Logged in")
+            self.userSession = result?.user
         }
     }
     
@@ -55,13 +56,14 @@ class AuthViewModel: ObservableObject {
                     guard let user = result?.user else { return }
                     
                     let data = ["email" : email,
-                                "username" : username,
+                                "username" : username.lowercased(),
                                 "fullname" : fullName,
                                 "profileImageUrl" : profileImageUrl,
                                 "uid" : user.uid
                     ]
                     Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
                         print("Successfully uploaded User Data")
+                        self.userSession = result?.user
                     }
                 }
                 
