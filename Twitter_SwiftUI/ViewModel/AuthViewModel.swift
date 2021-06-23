@@ -10,8 +10,23 @@ import Firebase
 
 class AuthViewModel: ObservableObject {
     
-    func login() {
-        
+    @Published var userSession: FirebaseAuth.User? // To Observe signed in user
+    @Published var isAuthenticating = false // To observe to show loader
+    @Published var error: Error? // To observe to show toast
+    @Published var user: User?
+    
+    init() {
+        userSession = Auth.auth().currentUser
+    }
+    
+    func login(withEmail email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                print("Errro logging in \(error.localizedDescription)")
+                return
+            }
+            print("Successfully Logged in")
+        }
     }
     
     func registerUser(email: String, password: String, username: String, fullName: String, profileImage: UIImage) {
@@ -54,4 +69,8 @@ class AuthViewModel: ObservableObject {
         }
     }
     
+    func signOut() {
+        self.userSession = nil
+        try? Auth.auth().signOut()
+    }
 }
