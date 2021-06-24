@@ -11,6 +11,7 @@ struct NewSearchView: View {
     @State var searchText = ""
     @Binding var show: Bool
     @Binding var startChat: Bool
+    @ObservedObject var viewModel = SearchViewModel()
     
     var body: some View {
         ScrollView {
@@ -19,12 +20,12 @@ struct NewSearchView: View {
             
             HStack {
                 VStack {
-                    ForEach(Range(0...5)) { _ in
+                    ForEach(viewModel.users) { user in
                         Button(action: {
                             self.show.toggle()
                             self.startChat.toggle()
                         }, label: {
-                            UserCell()
+                            UserCell(user: user)
                         })
                         
                     }
