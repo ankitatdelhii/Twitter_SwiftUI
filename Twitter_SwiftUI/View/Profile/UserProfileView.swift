@@ -8,18 +8,15 @@
 import SwiftUI
 
 struct UserProfileView: View {
+    
+    let user: User
+    
     var body: some View {
         ScrollView {
             VStack {
-                ProfileHeaderView()
+                ProfileHeaderView(user: user)
                     .padding(.top)
             }
         }.navigationTitle("Batman")
-    }
-}
-
-struct UserProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserProfileView()
     }
 }
