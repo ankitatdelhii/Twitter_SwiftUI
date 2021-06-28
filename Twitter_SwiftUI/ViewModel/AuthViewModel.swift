@@ -15,6 +15,8 @@ class AuthViewModel: ObservableObject {
     @Published var error: Error? // To observe to show toast
     @Published var user: User? // To observe our Custom user
     
+    static let shared = AuthViewModel()
+    
     init() {
         userSession = Auth.auth().currentUser
         fetchUser()
@@ -28,6 +30,7 @@ class AuthViewModel: ObservableObject {
             }
             print("Successfully Logged in")
             self.userSession = result?.user
+            self.fetchUser()
         }
     }
     
@@ -65,6 +68,7 @@ class AuthViewModel: ObservableObject {
                     Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
                         print("Successfully uploaded User Data")
                         self.userSession = result?.user
+                        self.fetchUser()
                     }
                 }
                 
