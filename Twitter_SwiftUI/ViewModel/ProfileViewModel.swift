@@ -15,6 +15,7 @@ class ProfileViewModel: ObservableObject {
     
     init(user: User) {
         self.user = user
+        checkIfUserIsFollowed()
     }
     
     func follow() {
@@ -40,6 +41,16 @@ class ProfileViewModel: ObservableObject {
             followerFef.document(currentId).delete { _ in
                 self.isFollowed = false
             }
+        }
+    }
+    
+    func checkIfUserIsFollowed() {
+        guard let currentId = Auth.auth().currentUser?.uid else { return }
+        
+        let followingRef = COLLECTION_FOLLOWING.document(currentId).collection("user-following")
+        followingRef.document(user.id).getDocument { snapshot, _ in
+            guard let isUserFolllowed = snapshot?.exists else { return }
+            self.isFollowed = isUserFolllowed
         }
     }
     
