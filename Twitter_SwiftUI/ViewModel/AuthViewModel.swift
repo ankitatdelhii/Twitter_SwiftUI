@@ -78,6 +78,7 @@ class AuthViewModel: ObservableObject {
     
     func signOut() {
         self.userSession = nil
+        self.user = nil
         try? Auth.auth().signOut()
     }
     

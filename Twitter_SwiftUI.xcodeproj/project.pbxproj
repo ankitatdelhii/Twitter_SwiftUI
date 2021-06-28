@@ -45,6 +45,7 @@
 		9DC4F3502663B75E00549ED8 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4F34F2663B75E00549ED8 /* ChatView.swift */; };
 		9DC4F3522663E15D00549ED8 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4F3512663E15D00549ED8 /* ChatBubble.swift */; };
 		9DC4F3542663E7C700549ED8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4F3532663E7C700549ED8 /* Message.swift */; };
+		9DEF1A53268A4C840016B4A0 /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEF1A52268A4C840016B4A0 /* UploadTweetViewModel.swift */; };
 		9DFED9682683C11C001659C1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFED9672683C11C001659C1 /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		9DC4F34F2663B75E00549ED8 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		9DC4F3512663E15D00549ED8 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		9DC4F3532663E7C700549ED8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9DEF1A52268A4C840016B4A0 /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 		9DFED9672683C11C001659C1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +191,7 @@
 				9D08B461268113950032F117 /* AuthViewModel.swift */,
 				9D5CD071268519A400290410 /* SearchViewModel.swift */,
 				9D1D9CE82687AE2700FA91DB /* ProfileViewModel.swift */,
+				9DEF1A52268A4C840016B4A0 /* UploadTweetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				9D1D9CE92687AE2700FA91DB /* ProfileViewModel.swift in Sources */,
 				9D03238726601D620011A87A /* ConversationsView.swift in Sources */,
 				9D46A34526504912006352F6 /* Twitter_SwiftUIApp.swift in Sources */,
+				9DEF1A53268A4C840016B4A0 /* UploadTweetViewModel.swift in Sources */,
 				9D5E48E4267F903600A1F116 /* ImagePicker.swift in Sources */,
 				9DC4F3522663E15D00549ED8 /* ChatBubble.swift in Sources */,
 				9D03238926601DE70011A87A /* ConversationsCell.swift in Sources */,
