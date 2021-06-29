@@ -10,16 +10,16 @@ import SwiftUI
 struct FeedView: View {
     
     @State private var isShowingNewTweetView = false
-    @EnvironmentObject var viewModel: AuthViewModel
+    @ObservedObject var viewModel = FeedViewModel()
     
     var body: some View {
         ZStack(alignment: .bottomTrailing, content: {
             ScrollView {
                 VStack {
-                    ForEach(0..<9) { _ in
-                        TweetCell()
+                    ForEach(viewModel.tweets) { eachTweet in
+                        TweetCell(tweet: eachTweet)
                     }
-                }
+                }.padding(.top)
             }
             
             Button(action: {
@@ -43,8 +43,3 @@ struct FeedView: View {
     }
 }
 
-struct FeedView_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedView()
-    }
-}
