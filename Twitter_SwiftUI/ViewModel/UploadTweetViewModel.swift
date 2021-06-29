@@ -10,6 +10,12 @@ import Firebase
 
 class UploadTweetViewModel: ObservableObject {
     
+    @Binding var isPresented: Bool
+    
+    init(isPresented: Binding<Bool>) {
+        self._isPresented = isPresented
+    }
+    
     func uploadTweet(caption: String) {
         print("Upload tweet")
         guard let user = AuthViewModel.shared.user else { return }
@@ -27,6 +33,7 @@ class UploadTweetViewModel: ObservableObject {
         
         docRef.setData(data) { _ in
             print("Successfully Uploaded Tweet.!")
+            self.isPresented.toggle()
         }
     }
     
