@@ -12,10 +12,14 @@ class ProfileViewModel: ObservableObject {
     
     let user: User
     @Published var isFollowed = false
+    @Published var userTweets = [Tweet]()
+    @Published var likedTweets = [Tweet]()
     
     init(user: User) {
         self.user = user
         checkIfUserIsFollowed()
+        fetchUserTweets()
+        fetchLikedTweets()
     }
     
     func follow() {
@@ -51,6 +55,31 @@ class ProfileViewModel: ObservableObject {
         followingRef.document(user.id).getDocument { snapshot, _ in
             guard let isUserFolllowed = snapshot?.exists else { return }
             self.isFollowed = isUserFolllowed
+        }
+    }
+    
+    func fetchUserTweets() {
+        COLLECTION_TWEETS.whereField("uid", isEqualTo: user.id).getDocuments { snapshot, _ in
+            guard let documents = snapshot?.documents else { return }
+            documents.forEach { document  in
+//                print("Document is \(document)")
+            }
+            
+        }
+    }
+    
+    func fetchLikedTweets() {
+        COLLECTION_USERS.document(user.id).collection("user-likes").getDocuments { snapshot, _ in
+            guard let documents = snapshot?.documents else { return }
+            let tweetIds = documents.map({ $0.documentID })
+            
+            tweetIds.forEach { id in
+                COLLECTION_TWEETS.document(id).getDocument { idSnapshot, _  in
+                    guard let data = idSnapshot?.data() else { return }
+                    let tweet = Tweet(dictionary: data)
+                    print("Liked Tweets are \(tweet)")
+                }
+            }
         }
     }
     
