@@ -61,9 +61,7 @@ class ProfileViewModel: ObservableObject {
     func fetchUserTweets() {
         COLLECTION_TWEETS.whereField("uid", isEqualTo: user.id).getDocuments { snapshot, _ in
             guard let documents = snapshot?.documents else { return }
-            documents.forEach { document  in
-//                print("Document is \(document)")
-            }
+            self.userTweets = documents.map({ Tweet(dictionary: $0.data()) })
             
         }
     }
@@ -78,6 +76,7 @@ class ProfileViewModel: ObservableObject {
                     guard let data = idSnapshot?.data() else { return }
                     let tweet = Tweet(dictionary: data)
                     print("Liked Tweets are \(tweet)")
+                    self.likedTweets.append(tweet)
                 }
             }
         }

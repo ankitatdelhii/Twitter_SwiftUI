@@ -22,6 +22,11 @@ struct UserProfileView: View {
             VStack {
                 ProfileHeaderView(isFollowed: $viewModel.isFollowed, viewModel: viewModel)
                     .padding(.top)
+                
+                ForEach(viewModel.likedTweets) { eachTweet in
+                    TweetCell(tweet: eachTweet)
+                        .padding()
+                }
             }
         }.navigationTitle("Batman")
     }
