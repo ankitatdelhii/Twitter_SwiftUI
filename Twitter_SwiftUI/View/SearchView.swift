@@ -19,7 +19,7 @@ struct SearchView: View {
             
             HStack {
                 VStack {
-                    ForEach(viewModel.users) { user in
+                    ForEach(searchText.isEmpty ? viewModel.users : viewModel.filterUsers(searchText)) { user in
                         NavigationLink(
                             destination: LazyView(UserProfileView(user: user)),
                             label: {
