@@ -51,6 +51,7 @@
 		9DC4F3522663E15D00549ED8 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4F3512663E15D00549ED8 /* ChatBubble.swift */; };
 		9DC4F3542663E7C700549ED8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4F3532663E7C700549ED8 /* Message.swift */; };
 		9DEF1A53268A4C840016B4A0 /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEF1A52268A4C840016B4A0 /* UploadTweetViewModel.swift */; };
+		9DF5990F2691FA16000E2C73 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5990E2691FA16000E2C73 /* LazyView.swift */; };
 		9DFED9682683C11C001659C1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFED9672683C11C001659C1 /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		9DC4F3512663E15D00549ED8 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		9DC4F3532663E7C700549ED8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9DEF1A52268A4C840016B4A0 /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
+		9DF5990E2691FA16000E2C73 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		9DFED9672683C11C001659C1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -236,6 +238,7 @@
 				9D871F50267643CE0076E478 /* CustomTextField.swift */,
 				9D871F5226764F9B0076E478 /* CustomSecureField.swift */,
 				9D5E48E3267F903600A1F116 /* ImagePicker.swift */,
+				9DF5990E2691FA16000E2C73 /* LazyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DF5990F2691FA16000E2C73 /* LazyView.swift in Sources */,
 				9D13859D265EC78000F56E83 /* SearchView.swift in Sources */,
 				9D5D73322673E3D3002DEE7E /* TextArea.swift in Sources */,
 				9D871F4F26763FC20076E478 /* RegistrationView.swift in Sources */,

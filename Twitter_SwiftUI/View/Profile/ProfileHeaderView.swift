@@ -60,11 +60,6 @@ struct ProfileHeaderView: View {
             ProfileActionButtonView(viewModel: viewModel, isFollowed: $isFollowed)
                 .padding()
             
-            FilterButtomView(selectedOption: $selectedFilter)
-            
-//            ForEach(Range(0...9)) { _ in
-//                TweetCell()
-//            }
             
             Spacer()
             

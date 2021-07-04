@@ -62,7 +62,7 @@ class ProfileViewModel: ObservableObject {
         COLLECTION_TWEETS.whereField("uid", isEqualTo: user.id).getDocuments { snapshot, _ in
             guard let documents = snapshot?.documents else { return }
             self.userTweets = documents.map({ Tweet(dictionary: $0.data()) })
-            
+            print("View Loaded")
         }
     }
     
@@ -79,6 +79,15 @@ class ProfileViewModel: ObservableObject {
                     self.likedTweets.append(tweet)
                 }
             }
+        }
+    }
+    
+    func tweets(forFilter filter: TweetFilterOptions) -> [Tweet] {
+        switch filter {
+        case .tweets:
+            return userTweets
+        case .likes:
+            return likedTweets
         }
     }
     
