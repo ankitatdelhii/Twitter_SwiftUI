@@ -10,6 +10,7 @@ import SwiftUI
 struct MessageInputView: View {
     
     @Binding var messageText: String
+    let sendAction: () -> ()
     
     var body: some View {
         HStack {
@@ -19,7 +20,7 @@ struct MessageInputView: View {
                 .frame(minHeight: 30)
 //                .padding(.leading)
             
-            Button(action: {}, label: {
+            Button(action: sendAction, label: {
                 Text("Send")
             })
 //            .padding(.trailing)
@@ -28,8 +29,8 @@ struct MessageInputView: View {
     }
 }
 
-struct MessageInputView_Previews: PreviewProvider {
-    static var previews: some View {
-        MessageInputView(messageText: .constant(""))
-    }
-}
+//struct MessageInputView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MessageInputView(messageText: .constant(""))
+//    }
+//}

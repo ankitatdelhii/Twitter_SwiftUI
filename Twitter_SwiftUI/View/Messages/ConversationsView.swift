@@ -15,11 +15,11 @@ struct ConversationsView: View {
     var body: some View {
         
         ZStack(alignment: .bottomTrailing, content: {
-            NavigationLink(
-                destination: ChatView(),
-                isActive: $showChat,
-                label: {
-                })
+//            NavigationLink(
+//                destination: ChatView(),
+//                isActive: $showChat,
+//                label: {
+//                })
             
             ScrollView {
                 VStack {
