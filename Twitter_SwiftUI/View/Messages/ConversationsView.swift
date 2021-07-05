@@ -29,7 +29,7 @@ struct ConversationsView: View {
                         NavigationLink(
                             destination: ChatView(user: eachRecentMessage.user),
                             label: {
-                                ConversationsCell()
+                                ConversationsCell(message: eachRecentMessage)
                             })
                     }
                 }
