@@ -11,7 +11,8 @@ struct NewSearchView: View {
     @State var searchText = ""
     @Binding var show: Bool
     @Binding var startChat: Bool
-    @ObservedObject var viewModel = SearchViewModel()
+    @ObservedObject var viewModel = SearchViewModel(config: .newmessage)
+    @Binding var user: User?
     
     var body: some View {
         ScrollView {
@@ -20,10 +21,11 @@ struct NewSearchView: View {
             
             HStack {
                 VStack {
-                    ForEach(viewModel.users) { user in
+                    ForEach(searchText.isEmpty ? viewModel.users : viewModel.filterUsers(searchText)) { user in
                         Button(action: {
                             self.show.toggle()
                             self.startChat.toggle()
+                            self.user = user
                         }, label: {
                             UserCell(user: user)
                         })
@@ -39,8 +41,8 @@ struct NewSearchView: View {
     }
 }
 
-struct NewSearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewSearchView(show: .constant(true), startChat: .constant(true))
-    }
-}
+//struct NewSearchView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewSearchView(show: .constant(true), startChat: .constant(true))
+//    }
+//}
