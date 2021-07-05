@@ -30,6 +30,7 @@ struct ChatView: View {
             
             MessageInputView(messageText: $messageText){
                 viewModel.sendMessage(messageText)
+                self.messageText = ""
             }
                 .padding()
         }.navigationTitle(user.username)
