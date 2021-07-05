@@ -188,11 +188,11 @@
 		9D46A35426505052006352F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D9C01FA26938B5A00F548BA /* Main */,
 				9D871F4B26763F610076E478 /* Authentication */,
 				9DAEB793267294BF0027E3F3 /* Tweets */,
 				9D525CFC266956CA00156C70 /* Profile */,
 				9D03238526601D4C0011A87A /* Messages */,
-				9D46A34626504912006352F6 /* ContentView.swift */,
 				9D46A3562650506B006352F6 /* FeedView.swift */,
 				9D5D42B026514C520025D008 /* TweetCell.swift */,
 				9D13859C265EC78000F56E83 /* SearchView.swift */,
@@ -256,6 +256,14 @@
 				9D871F4E26763FC20076E478 /* RegistrationView.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		9D9C01FA26938B5A00F548BA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9D46A34626504912006352F6 /* ContentView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		9DAEB793267294BF0027E3F3 /* Tweets */ = {

@@ -10,6 +10,7 @@ import Kingfisher
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    @State var selectedIndex = 0
     
     var body: some View {
         
@@ -17,27 +18,37 @@ struct ContentView: View {
             if viewModel.userSession != nil {
                 NavigationView {
                     
-                    TabView {
+                    TabView(selection: $selectedIndex) {
                         FeedView()
+                            .onTapGesture {
+                                self.selectedIndex = 0
+                            }
                             .tabItem {
                                 Image(systemName: "house")
                                 Text("Home")
                             }
+                            .tag(0)
                         
                         SearchView()
+                            .onTapGesture {
+                                self.selectedIndex = 1
+                            }
                             .tabItem {
                                 Image(systemName: "magnifyingglass")
                                 Text("Search")
-                            }
+                            }.tag(1)
                         
                         ConversationsView()
+                            .onTapGesture {
+                                self.selectedIndex = 2
+                            }
                             .tabItem {
                                 Image(systemName: "envelope")
                                 Text("Messages")
-                            }
+                            }.tag(2)
                     }
                     
-                    .navigationTitle("Home")
+                    .navigationTitle(viewModel.tabTitle(forIndex: selectedIndex))
                     .navigationBarItems(leading: Button(action: {
                         viewModel.signOut()
                     }, label: {
