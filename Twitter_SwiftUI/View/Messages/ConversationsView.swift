@@ -21,7 +21,7 @@ struct ConversationsView: View {
             
             if let user = user {
                 NavigationLink(
-                    destination: ChatView(user: user),
+                    destination: LazyView(ChatView(user: user)),
                     isActive: $showChat,
                     label: {
                     })
@@ -32,7 +32,7 @@ struct ConversationsView: View {
                 VStack {
                     ForEach(viewModel.recentMessages) { eachRecentMessage in
                         NavigationLink(
-                            destination: ChatView(user: eachRecentMessage.user),
+                            destination: LazyView(ChatView(user: eachRecentMessage.user)),
                             label: {
                                 ConversationsCell(message: eachRecentMessage)
                             })
