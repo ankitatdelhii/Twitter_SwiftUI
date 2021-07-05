@@ -47,6 +47,7 @@
 		9DAEB795267294E70027E3F3 /* NewTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAEB794267294E70027E3F3 /* NewTweetView.swift */; };
 		9DBBF000268E3BB00042C84F /* TweetActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBEFFF268E3BB00042C84F /* TweetActionViewModel.swift */; };
 		9DBE10212692E3AC00B3894F /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBE10202692E3AC00B3894F /* ChatViewModel.swift */; };
+		9DBE10232692F86C00B3894F /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBE10222692F86C00B3894F /* ConversationsViewModel.swift */; };
 		9DC4F34E2663B59300549ED8 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4F34D2663B59300549ED8 /* MessageInputView.swift */; };
 		9DC4F3502663B75E00549ED8 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4F34F2663B75E00549ED8 /* ChatView.swift */; };
 		9DC4F3522663E15D00549ED8 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4F3512663E15D00549ED8 /* ChatBubble.swift */; };
@@ -94,6 +95,7 @@
 		9DAEB794267294E70027E3F3 /* NewTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTweetView.swift; sourceTree = "<group>"; };
 		9DBBEFFF268E3BB00042C84F /* TweetActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetActionViewModel.swift; sourceTree = "<group>"; };
 		9DBE10202692E3AC00B3894F /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		9DBE10222692F86C00B3894F /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
 		9DC4F34D2663B59300549ED8 /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
 		9DC4F34F2663B75E00549ED8 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		9DC4F3512663E15D00549ED8 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				9D7361C3268BAA1200829E06 /* FeedViewModel.swift */,
 				9DBBEFFF268E3BB00042C84F /* TweetActionViewModel.swift */,
 				9DBE10202692E3AC00B3894F /* ChatViewModel.swift */,
+				9DBE10222692F86C00B3894F /* ConversationsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DF5990F2691FA16000E2C73 /* LazyView.swift in Sources */,
+				9DBE10232692F86C00B3894F /* ConversationsViewModel.swift in Sources */,
 				9D13859D265EC78000F56E83 /* SearchView.swift in Sources */,
 				9D5D73322673E3D3002DEE7E /* TextArea.swift in Sources */,
 				9D871F4F26763FC20076E478 /* RegistrationView.swift in Sources */,

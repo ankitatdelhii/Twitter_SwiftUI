@@ -11,6 +11,8 @@ struct ConversationsView: View {
     
     @State var isShowingNewMessageView = false
     @State var showChat = false
+    @ObservedObject var viewModel = ConversationsViewModel()
+    
     
     var body: some View {
         
@@ -23,9 +25,9 @@ struct ConversationsView: View {
             
             ScrollView {
                 VStack {
-                    ForEach(0..<9) { _ in
+                    ForEach(viewModel.recentMessages) { eachRecentMessage in
                         NavigationLink(
-                            destination: Text("Inside Chat"),
+                            destination: ChatView(user: eachRecentMessage.user),
                             label: {
                                 ConversationsCell()
                             })
